@@ -1,0 +1,16 @@
+js
+=>
+function 차이
+공부
+
+
+setInterval(() => {
+  console.log("setInterval");
+}, 100);
+
+innerText
+innerHTML 차이
+
+padstart?
+
+https://animate.style/
