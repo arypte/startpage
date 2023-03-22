@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background-color: lightblue;
+  color: black;
+}
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; // 화면을 덮는? 깨지지않는? 적용 전후 뚜렷하긴함
+}
+
+main {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
