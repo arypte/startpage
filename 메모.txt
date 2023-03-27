@@ -12,5 +12,4 @@ innerText
 innerHTML 차이
 
 padstart?
-
 https://animate.style/
