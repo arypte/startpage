@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -34,11 +37,16 @@ main {
 
   .time {
     padding: 12px 24px;
+    font-size: 30px;
   }
 
   .quotes {
     position: relative;
-    font-size: 60px;
+    font-size: 30px;
+    font-family: "Staatliches", cursive;
+    color: #f1c164;
+    text-shadow: 5px 5px #2d63a7;
+    margin: 0;
 
     .quotesAddBtn {
       display: none;
@@ -60,11 +68,25 @@ main {
   }
 
   .search {
+    margin-top: 30px;
+    .searchTitle {
+      display: inline-block;
+      font-size: 25px;
+    }
+
+    .searchTitle > svg,
+    .searchTitle > div {
+      display: inline;
+    }
+
     .searchLogo {
-      width: 32px;
-      height: 32px;
+      width: 25px;
+      height: 25px;
 
       animation: spin 20s linear infinite;
+    }
+    .searchInput {
+      margin-left: 35px;
     }
   }
 
