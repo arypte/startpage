@@ -1,3 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  margin: 0;
+  color: rgb(22, 22, 22);
+}
 
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+main {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .time {
+  padding: 12px 24px;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 9999px;
+  background-color: rgba(25, 25, 55, 0.5);
+}
+main .quotes {
+  position: relative;
+  font-size: 30px;
+  font-family: "Staatliches", cursive;
+  color: #f1c164;
+  text-shadow: 5px 5px #2d63a7;
+  margin: 0;
+}
+main .quotes .quotesMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  min-width: 600px;
+}
+main .quotes .quotesAddBtn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+main .quotes:hover .quotesAddBtn {
+  display: inline-block;
+}
+main .quotes .manageQuotes {
+  display: none;
+}
+main .selQuotes {
+  display: none;
+}
+main .delQuotes {
+  display: none;
+}
+main .newQuotes {
+  display: none;
+}
+main .search {
+  margin-top: 30px;
+}
+main .search .searchTitle {
+  display: inline-block;
+  font-size: 25px;
+}
+main .search .searchTitle > svg,
+main .search .searchTitle > div {
+  display: inline;
+}
+main .search .searchLogo {
+  width: 25px;
+  height: 25px;
+  animation: spin 5s linear infinite;
+}
+main .search .searchInput {
+  margin-left: 35px;
+}
+main .searchResult {
+  display: none;
+}
+main .nft {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
+}
+main .nft img {
+  width: 256px;
+  height: 256px;
+}
+main .nft .nftHover {
+  position: absolute;
+  display: none;
+  width: 256px;
+  height: 256px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .nft .nftHover a {
+  color: white;
+}
+main .nft .nftHover button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -8px;
+  border-radius: 9999px;
+  width: 24px;
+  height: 24px;
+}
+main .nft:hover .nftHover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .nftView {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */

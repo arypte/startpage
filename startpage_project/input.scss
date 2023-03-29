@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  color: rgb(22, 22, 22);
+}
+
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+main {
+  position: fixed; // zindex는 static에서 안되기때문에 변경
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; // 세로로 . 이거 없으면 기본은 가로순서로 배치
+  justify-content: center; // 세로 가운데 정렬
+  align-items: center; // 가로 가운데 정렬
+
+  .time {
+    padding: 12px 24px;
+    font-size: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 9999px;
+    background-color: rgba(25, 25, 55, 0.5);
+  }
+
+  .quotes {
+    position: relative;
+    font-size: 30px;
+    font-family: 'Staatliches', cursive;
+    color: #f1c164;
+    text-shadow: 5px 5px #2d63a7;
+    margin: 0;
+
+    .quotesMsg {
+      display: flex;
+      justify-content: center;
+      align-items: center; // 최소 길이가 지정되어 있기 때문에 가운데 정렬.
+      max-width: 100%; // 글씨가 길면 맞춰서 길어짐.
+      min-width: 600px; // 글씨가 작으면 명단 관리 버튼이 찌그러지는거 방지.
+    }
+
+    .quotesAddBtn {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%); // 버튼 가운데 정렬
+    }
+
+    &:hover {
+      .quotesAddBtn {
+        display: inline-block;
+      }
+    }
+    .manageQuotes {
+      display: none;
+    }
+  }
+
+  .selQuotes {
+    display: none;
+  }
+
+  .delQuotes {
+    display: none;
+  }
+
+  .newQuotes {
+    display: none;
+  }
+
+  .search {
+    margin-top: 30px;
+    .searchTitle {
+      display: inline-block;
+      font-size: 25px;
+    }
+
+    .searchTitle > svg,
+    .searchTitle > div {
+      display: inline;
+    }
+
+    .searchLogo {
+      width: 25px;
+      height: 25px;
+
+      animation: spin 5s linear infinite;
+    }
+    .searchInput {
+      margin-left: 35px;
+    }
+  }
+
+  .searchResult {
+    display: none;
+  }
+
+  .nft {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 24px;
+
+    img {
+      width: 256px;
+      height: 256px;
+    }
+
+    .nftHover {
+      position: absolute;
+      display: none;
+      width: 256px;
+      height: 256px;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      a {
+        color: white;
+      }
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: -8px;
+        border-radius: 9999px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover {
+      .nftHover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .nftView {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 24px;
+    display: none;
+  }
+}
