@@ -13,6 +13,14 @@ body {
   color: rgb(22, 22, 22);
 }
 
+.wea {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
 .bgVideo {
   position: fixed;
   top: 0;
@@ -38,14 +46,14 @@ main .time {
   border: 1px solid black;
   padding: 10px;
   border-radius: 9999px;
-  background-color: rgba(25, 25, 55, 0.5);
+  background-color: rgba(189, 91, 78, 0.5);
 }
 main .quotes {
   position: relative;
   font-size: 30px;
   font-family: "Staatliches", cursive;
-  color: #f1c164;
-  text-shadow: 5px 5px #2d63a7;
+  color: white;
+  text-shadow: 3px 3px black;
   margin: 0;
 }
 main .quotes .quotesMsg {

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 @keyframes spin {
   from {
@@ -43,7 +43,7 @@ main {
   .quotes {
     position: relative;
     font-size: 30px;
-    font-family: "Staatliches", cursive;
+    font-family: 'Staatliches', cursive;
     color: #f1c164;
     text-shadow: 5px 5px #2d63a7;
     margin: 0;

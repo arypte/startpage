@@ -12,6 +12,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="wea">
+      <div>
+        <img
+          class="weatherIcon"
+          src="https://openweathermap.org/img/wn/10d@2x.png"
+          alt="weather"
+        />
+      </div>
+      <select class="selwea">
+        <option>서울</option>
+        <option>부산</option>
+        <option>대구</option>
+      </select>
+      <div class="weatherTemp">Seoul, 22℃</div>
+    </div>
+
     <main>
       <div class="time animate__animated animate__fadeInDownBig">Time</div>
       <div class="quotes">
@@ -30,12 +46,7 @@
       </div>
 
       <div class="delQuotes">
-        <select class="delQuotesSelect" onchange="showDelQuotes()">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-        </select>
+        <select class="delQuotesSelect" onclick="showDelQuotes()"></select>
         <button class="delQuotesButton" onclick="onClickDel()">삭 제</button>
       </div>
 

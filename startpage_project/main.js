@@ -37,6 +37,7 @@ function getQuotes() {
 }
 
 getQuotes();
+setInterval(getQuotes, 3000);
 
 function onClicksel() {
   const selQuotes = document.querySelector('.selQuotes');
@@ -82,12 +83,10 @@ function showDelQuotes() {
   let savedQuotes = localStorage.getItem(QUOTES);
   let quotesArray = JSON.parse(savedQuotes);
 
-  // 기존 select 요소에 있던 option 요소들을 모두 제거합니다.
   while (delQuotesSelect.firstChild) {
     delQuotesSelect.removeChild(delQuotesSelect.firstChild);
   }
 
-  // 모든 명언을 option 요소로 만들어서 select 요소에 추가합니다.
   for (let i = 0; i < quotesArray.length; i++) {
     const option = document.createElement('option');
     option.value = quotesArray[i];
@@ -95,7 +94,6 @@ function showDelQuotes() {
     delQuotesSelect.appendChild(option);
   }
 
-  // select 요소의 첫 번째 option을 선택합니다.
   delQuotesSelect.selectedIndex = 0;
 
   delQuotes.style.display = 'inline-block';
@@ -171,3 +169,32 @@ function onClickToggle(value) {
     nftView.style.display = 'inline-block';
   }
 }
+
+const API_KEY = '9812c310627f5f1d4cf052d4df4a947e';
+
+const weatherIcon = document.querySelector('.weatherIcon');
+const weatherTemp = document.querySelector('.weatherTemp');
+
+navigator.geolocation.getCurrentPosition(
+  (position) => {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
+
+    console.log(url);
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        weatherTemp.innerText =
+          data.name + ',' + parseInt(data.main.temp) + 'C';
+
+        weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      });
+  },
+
+  () => alert('Now allowed')
+);
+
+// 화살표함수 , 일반함수는 완전히 같진않다.
+// 쿼리스트링?
